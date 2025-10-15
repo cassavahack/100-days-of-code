@@ -43,7 +43,7 @@ class Restaurant:
 # rest_3.describe_restaurant()
 
 
-restaurant = Restaurant("Pacific East", "Chinese")
+# restaurant = Restaurant("Pacific East", "Chinese")
 
 # print(restaurant.number_served)
 #
@@ -52,7 +52,24 @@ restaurant = Restaurant("Pacific East", "Chinese")
 # print(restaurant.number_served)
 
 
-restaurant.set_number_served(5)
-restaurant.increment_number_served(100)
+# restaurant.set_number_served(5)
+# restaurant.increment_number_served(100)
+#
+# print(restaurant.number_served)
 
-print(restaurant.number_served)
+
+class IceCreamStand(Restaurant):
+    """rREPRESENT ASPECTS OF RESTAURANT SPECIFIC TO ICECREAM STAND"""
+
+    def __init__(self,restaurant_name,cuisine_type,number_served = 0):
+        super(). __init__(restaurant_name,cuisine_type)
+        self.flavors = ["Vanilla", "chocolate", "peach"]
+
+
+    def show_flavors(self):
+        print(f"we have {self.flavors} for sale")
+
+
+my_ice_cream_stand = IceCreamStand("The wave","Dessert")
+
+my_ice_cream_stand.show_flavors()
